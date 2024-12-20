@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">MuseoDeArteEgipcio</string>
+
+    <string name="homeTitle1">Bienvenido</string>
+    <string name="homeDescription1">Con ayuda de esta aplicacion aprenderas muchas cosas muy interesantes
+        sobre la cultura egipcia, algunas de ellas son verdaderamente alucinantes. Descubriras muchas
+    cosas nuevas respecto a temas variados, tales como...</string>
+
+    <string name="homeTitle2">Piramides</string>
+    <string name="homeDescription2">Las piramides egipcias son realmente increibles, han sido estudiadas por
+    muchisimos historiadores, arquitectos e ingenieros, en esta aplicacion podras descubrir las mas detalles.</string>
+
+    <string name="homeTitle3">Dioses</string>
+    <string name="homeDescription3">Los dioses de egipto han sido inspiracicon para muchas peliculas actuales
+    y no es para menos, ya que la teologia egipcia es una de las mas importantes en el mundo actual.
+    En esta aplicacion sabras mas al respecto y seguro que tu tambien quedaras fascinado</string>
+
+    <string name="homeTitle4">Y mucho mas...</string>
+    <string name="homeDescription4">Asi es, aprenderas mucho mas en esta aplicacion, pulsa el boton de menu
+    en la barra superior y veras todas las cosas que puedes aprender de manera sencilla y divertida!</string>
+
+    <string name="videoDescription">Las pirámides de Egipto son estructuras monumentales construidas hace más de 4,500 años, y representan uno de los mayores logros de la ingeniería antigua. Fueron diseñadas como tumbas para los faraones, quienes eran considerados dioses en la Tierra, y reflejan la habilidad, devoción y creatividad del antiguo Egipto. La Gran Pirámide de Guiza, dedicada al faraón Keops, es la más famosa y la única de las Siete Maravillas del Mundo Antiguo que todavía se conserva. Su construcción es un misterio que ha intrigado a arqueólogos e historiadores durante siglos. Las pirámides estaban alineadas cuidadosamente según los puntos cardinales y contienen pasadizos secretos y cámaras funerarias. Construidas con millones de bloques de piedra, transportados y ensamblados con notable precisión, las pirámides simbolizan la conexión entre el faraón y los dioses y han inspirado numerosas teorías y leyendas. Hoy en día, las pirámides siguen siendo un símbolo de la rica historia y cultura de Egipto, atrayendo a millones de turistas de todo el mundo.</string>
+
+    <string name="petsInstructions">A continuacion, veras a los animales mas iconicos de la cultura egipcia, pulsa el boton para descubrir el sonido que hacen esos animales. Diviertete!</string>
+
+
+    <string-array name="year">
+        <item>3100 a.C.</item>
+        <item>2700 a.C.</item>
+        <item>2600 a.C.</item>
+        <item>2580 a.C.</item>
+        <item>2500 a.C.</item>
+        <item>1479 a.C.</item>
+        <item>1332 a.C.</item>
+        <item>1279 a.C.</item>
+        <item>525 a.C.</item>
+        <item>332 a.C.</item>
+        <item>30 a.C.</item>
+    </string-array>
+
+    <!-- Descripción de los eventos históricos importantes de la antigua Egipto -->
+    <string-array name="historicMoment">
+        <item>Unificación del Alto y Bajo Egipto bajo el faraón Menes, formando el primer estado unificado en la región.</item>
+        <item>Comienzo del Reino Antiguo, donde se establecen las bases para las pirámides y la organización estatal.</item>
+        <item>Construcción de la primera pirámide escalonada en Saqqara por el faraón Djoser, diseñada por el arquitecto Imhotep.</item>
+        <item>Construcción de la Gran Pirámide de Giza bajo el faraón Keops, una de las Siete Maravillas del Mundo Antiguo.</item>
+        <item>Período de prosperidad en Egipto conocido como la Edad de Oro, con avances en la cultura, arquitectura y tecnología.</item>
+        <item>Hatshepsut se convierte en una de las primeras mujeres faraón, liderando un período de prosperidad y expansión comercial.</item>
+        <item>Tutankamón asciende al trono y se restaura el politeísmo después de la revolución monoteísta de su padre, Akenatón.</item>
+        <item>Ramsés II asciende al trono y lidera la batalla de Kadesh, estableciendo el primer tratado de paz conocido.</item>
+        <item>Egipto es conquistado por los persas, marcando el final de una era de independencia para la civilización egipcia.</item>
+        <item>Conquista de Egipto por Alejandro Magno, iniciando el período helenístico bajo la dinastía ptolemaica.</item>
+        <item>Egipto se convierte en una provincia romana después de la derrota de Cleopatra y Marco Antonio por Octavio.</item>
+    </string-array>
+
+
+</resources>
