@@ -94,6 +94,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.example.museodearteegipcio.navigation.ScreenRoutes
 import com.example.museodearteegipcio.views.ExoPlayerManager.getExoPlayer
 import kotlinx.coroutines.delay
@@ -216,8 +219,21 @@ fun PaintingView() {
         player.addListener(listener)
 
         onDispose {
-            player.removeListener(listener)
-            player.release() // Liberar recursos cuando el Composable se destruye
+            //player.removeListener(listener)
+            //player.release() // Liberar recursos cuando el Composable se destruye
+        }
+    }
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(key1 = lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_PAUSE) {
+                ExoPlayerManager.releaseExoPlayer()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
         }
     }
 

@@ -104,6 +104,7 @@ fun SingleVideoView(videoInfo: VideoInfo) {
                 exoPlayer.playWhenReady = false
             } else if (event == Lifecycle.Event.ON_PAUSE) {
                 exoPlayer.playWhenReady = false
+                ExoPlayerManager.releaseExoPlayer()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)

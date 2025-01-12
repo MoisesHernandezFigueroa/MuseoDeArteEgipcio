@@ -49,6 +49,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
@@ -57,6 +60,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import com.example.museodearteegipcio.R
 import com.example.museodearteegipcio.views.ExoPlayerManager.getExoPlayer
+import com.example.museodearteegipcio.views.ExoPlayerManager.releaseExoPlayer
 import kotlinx.coroutines.delay
 
 data class PetCardInfo(
@@ -133,8 +137,21 @@ fun PetsView() {
         player.addListener(listener)
 
         onDispose {
-            player.removeListener(listener)
-            player.release() // Liberar recursos cuando el Composable se destruye
+            //player.removeListener(listener)
+            //player.release() // Liberar recursos cuando el Composable se destruye
+        }
+    }
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(key1 = lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_PAUSE) {
+                releaseExoPlayer()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
         }
     }
 
